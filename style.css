@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    --bg-body: #f0f0f0;
+
+    --pad-menu: clamp(1rem, 1vw, 15rem);
+
+    --color-primary: #616462;
+    --color-secundary: #6CB48F;
+    --color-title: #000000;
+    --color-subtitle: #4E7D5E;
+    --color-terciary: #707581;
+
+    --color-button: #6CB48F;
+    --color-free: #FCA034;
+
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secundary: 'Bebas Neue', cursive;
+
+    --fs-nav: 1.4rem;
+    --fs-title: 10rem;
+    --fs-subtitle: 1.4rem;
+    --fs-text: 1.6rem;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-body);
+}
+
+.top {
+    display: flex;
+    place-content: right;
+    padding: 4.2rem  10rem 0rem 10rem;
+}
+
+header {
+    display: flex;
+    gap: 8.8rem;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 6.7rem;
+    align-items: center;
+
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--fs-nav);
+
+}
+
+nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: var(--color-secundary);
+    transform: scale(1.1);
+}
+.menu {
+    padding-left: var(--pad-menu);
+    transition: transform 0.7s;
+}
+
+.menu:hover {
+    cursor: pointer;
+    transform: scale(1.1) translateX(-40px);
+}
+
+main {
+    display: flex;
+    padding: 0 10rem;
+
+    gap: 250px;
+}
+
+.info span {
+    text-transform: uppercase;
+    color: var(--color-subtitle);
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    font-size: var(--fs-subtitle);
+}
+
+.info img {
+    padding-top: 8rem;
+}
+
+main h1 {
+    font-family: var(--ff-secundary);
+    font-size: var(--fs-title);
+    line-height: 90px;
+
+    max-width: 60rem;
+    padding-top: 2.3rem;
+}
+
+.info p {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-text);
+    color: var(--color-terciary);
+
+    max-width: 35rem;
+    padding-top: 3rem;
+}
+
+.info button {
+    margin-top: 5rem;
+
+    background-color: var(--color-button);
+    border: none;
+    padding: 1.5rem 3.5rem;
+    border-radius: 99rem;
+
+    font-size: 1.6rem;
+    font-family:var(--ff-primary);
+    font-weight: 800;
+    color: #f0f0f0;
+    transition: 0.3s;
+}
+
+.info button:hover{
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+.ilustration{
+    display: flex;
+    place-content: center;
+
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.ilustration img {
+    width: 430px;
+    height: auto;
+    
+}
+
+.precipitation {
+    position: absolute;
+    top: 320px;
+    right: 285px;
+    min-width: max-content;
+
+    background-color: #fff;
+    display: flex;
+    padding: 1rem 2rem;
+    border-radius: 99rem;
+
+    filter: opacity(0.8);
+    transition: 0.3s;
+}
+
+.condensation {
+    position: absolute;
+    top: 90px;
+    right: 170px;
+
+    background-color: #fff;
+    display: flex;
+    padding: 1rem 2rem;
+    border-radius: 99rem;
+
+    filter: opacity(0.8);
+    transition: 0.3s;
+}
+
+.evaporation {
+    position: absolute;
+    top: 290px;
+    right: 8px;
+
+    background-color: #fff;
+    display: flex;
+    padding: 1rem 2rem;
+    border-radius: 99rem;
+
+    filter: opacity(0.8);
+    transition: 0.3s;
+}
+
+.precipitation:hover, .condensation:hover, .evaporation:hover {
+    transform: scale(1.1);
+    filter: opacity(1);
+    cursor: default;
+}
+
+footer {
+    font-family: var(--ff-primary);
+    display: flex;
+    place-content: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    align-items: center;
+}
+
+.ebook a {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+
+    text-decoration: none;
+    
+}
+
+.ebook span{
+    font-size: var(--fs-nav);
+    text-transform: uppercase;
+    color: #fff;
+
+    background-color: var(--color-free);
+    padding: 0.5rem 1rem;
+    border-radius: 99rem;
+}
+
+.ebook span:hover, .ebook img:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ebook p {
+    font-size: var(--fs-nav);
+    color: var(--color-primary);
+}
+
+.chat img {
+    width: 85%;
+    transition: 0.3s;
+}
+
+.chat img:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+@media (max-width: 900px) {
+   .top {
+    display: flex;
+    place-content: right;
+    padding: 2rem 3rem;
+    }
+    
+    header{
+        gap: 1.5rem;
+    }
+
+    header img{
+        width: 80px;
+    }
+    .menu {
+        width: 30px;
+    }
+    .menu:hover{
+        transform: scale(1.2);
+    }
+    nav {
+        font-size: 1.2rem;
+        gap: 2rem;
+    }
+    main {
+        padding: 0 3rem;
+    }
+    main h1{
+        font-size: 9rem;
+    }
+    main{
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .ilustration img{
+        width: 280px;
+    }
+    
+}
